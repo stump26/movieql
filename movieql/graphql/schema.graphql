@@ -2,11 +2,32 @@ type Movie{
     id: Int!
     title: String!
     rating: Float!
-    summary:String!
-    language:String!
-    medium_cover_img:String!
+    medium_cover_image:String!
+    genres:[String]!
+    year:Int!
 }
-
+type detailMovie{
+    id:Int!
+    title:String!
+    year:Int!
+    rating:Float!
+    runtime:Int!
+    genres:[String]!
+    description_intro:String!
+    language:String!
+    background_image:String!
+    medium_cover_image:String!
+}
+type suggestionMovie{
+    id:Int!
+    title:String!
+    rating:Float!
+    year:Int!
+    medium_cover_image:String!
+    genres:[String]!
+}
 type Query{ 
     Movies(limit:Int, rating:Float): [Movie]!
+    detailMovie(id:Int!): detailMovie
+    suggestions(id:Int!):[suggestionMovie]!
 }
