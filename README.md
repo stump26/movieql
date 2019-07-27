@@ -1,2 +1,3 @@
-#MovieQL
-##nomadcoder GraphQL pratcice
+MovieQL
+==========
+## nomadcoder GraphQL pratcice
